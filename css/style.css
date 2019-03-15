@@ -9,7 +9,7 @@
 
 .category {
     --sports-color: #f99500;
-    --enternatinment-color: #a66bbe;
+    --entertainment-color: #a66bbe;
     --technology-color: #009cff;
 }
 
@@ -51,6 +51,57 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 2rem;
     overflow: hidden;
 }
+
+.category {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.category-sports { background: var(--sports-color); }
+.category-technology { background: var(--technology-color); }
+.category-entertainment { background: var(--entertainment-color); }
+
+.button {
+    display: inline-block;
+    border: none;
+    background: var(--dark-color);
+    color: #ffffff;
+    padding: 0.5rem;
+    margin-top: 0.7rem;
+    border-radius: 0.9rem;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button-primary {
+    background: var(--primary-color);
+}
+
+.button-light {
+    background: var(--light-color);
+}
+
+.button-secondary {
+    background: var(--secondary-color);
+}
+
+.button-dark {
+    background: var(--dark-color);
+}
+
+.button-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 
 /* main navigation */
 #main-navbar {
@@ -118,4 +169,16 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     opacity: 0.3;
     background: url("../images/featured.jpg") no-repeat center center/cover;
+}
+
+#showcase #showcase-content {
+    z-index: 1;
+}
+
+.showcase-container {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
 }
