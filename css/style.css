@@ -66,6 +66,38 @@ h1, h2, h3, h4, h5, h6 {
 .category-technology { background: var(--technology-color); }
 .category-entertainment { background: var(--entertainment-color); }
 
+.dark-background {
+    background: var(--dark-color);
+    color: #ffffff;
+}
+
+.dark-background h1,
+.dark-background h2,
+.dark-background h3,
+.dark-background p,
+.dark-background a,
+.secondary-background h1,
+.secondary-background h2,
+.secondary-background h3,
+.secondary-background p,
+.secondary-background a,
+.primary-background h1,
+.primary-background h2,
+.primary-background h3,
+.primary-background p,
+.primary-background a {
+    color: #ffffff;
+}
+
+.secondary-background {
+    background: var(--light-color);
+    color: #333333;
+}
+
+.primary-background {
+    background: var(--primary-color);
+}
+
 .button {
     display: inline-block;
     border: none;
@@ -100,6 +132,20 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 100%;
     text-align: center;
+}
+
+.padding-2 { padding: 1.5rem }
+
+.padding-3 { padding: 2.5rem }
+
+.vertical-padding-2 { padding: 1.5rem 0 }
+
+.vertical-padding-3 { padding: 2.5rem 0 }
+
+
+.article-card {
+    background: #ffffff;
+    padding: 1rem;
 }
 
 
@@ -182,3 +228,26 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
 }
+
+
+/* Home articles */
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+#home-articles .articles-container .article-card:first-child, #home-articles .articles-container .article-card:last-child {
+    /* span two columns inside articles container */
+    grid-column: 1 / span 2;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+#home-articles .articles-container .article-card:last-child {
+    grid-column: 2 / span 2;
+}
+
+
