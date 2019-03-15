@@ -52,6 +52,12 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: #555555 solid 1px;
+    width: 90%;
+}
+
 .category {
     display: inline-block;
     color: #ffffff;
@@ -238,7 +244,8 @@ h1, h2, h3, h4, h5, h6 {
     grid-gap: 1rem;
 }
 
-#home-articles .articles-container .article-card:first-child, #home-articles .articles-container .article-card:last-child {
+#home-articles .articles-container .article-card:first-child,
+#home-articles .articles-container .article-card:last-child {
     /* span two columns inside articles container */
     grid-column: 1 / span 2;
     display: grid;
@@ -249,6 +256,50 @@ h1, h2, h3, h4, h5, h6 {
 
 #home-articles .articles-container .article-card:last-child {
     grid-column: 2 / span 2;
+}
+
+/* Footer */
+#main-footer {
+    background: var(--dark-color);
+    color: #ffffff;
+}
+
+#main-footer .logo {
+    width: 9rem;
+}
+
+#main-footer a {
+    color: #ffffff;
+}
+
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+/* grabs any last child that's in the footer-container */
+#main-footer .footer-container > *:last-child {
+    grid-column: 1 / span 4;
+    background: #444444;
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+#main-footer .footer-container input[type='email'] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type='submit'] {
+    width: 90%;
+}
+
+.list li a:hover {
+    color: var(--primary-color) !important;
 }
 
 
