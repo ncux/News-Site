@@ -52,6 +52,17 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+.page-container {
+    margin: 2rem 0;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 5fr 2fr;
+}
+
+.page-container > *:first-child {
+    grid-row: 1 / span 3;
+}
+
 .list li {
     padding: 0.5rem 0;
     border-bottom: #555555 solid 1px;
