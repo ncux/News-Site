@@ -1,0 +1,106 @@
+
+/* Navigation */
+#main-navbar .container {
+    grid-template-columns: 6fr 3fr;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-navbar .container .logo {
+    grid-column: 1 / span 2;
+    justify-self: center;
+}
+
+#main-navbar .social-links {
+    justify-self: start;
+}
+
+#main-navbar #nav-links {
+    justify-self: end;
+}
+
+/* Home articles */
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+#home-articles .articles-container .article-card:first-child,
+#home-articles .articles-container .article-card:last-child {
+    grid-column: 1 / span 1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+
+
+
+/* for smartphones */
+@media(max-width: 500px) {
+    #main-navbar .container .logo {
+        margin-bottom: 1rem;
+    }
+
+    #main-navbar ul li a {
+        padding: 0.3rem;
+        font-weight: normal;
+    }
+
+    .showcase-container {
+        height: 50vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #showcase-content {
+        padding: 0.001rem;
+    }
+
+    .showcase-container #showcase-content a {
+        font-size: 0.7rem;
+        padding: 0.06rem;
+    }
+
+    /* Home articles */
+    #home-articles .articles-container, #main-footer .footer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    #main-footer .footer-container > *:last-child {
+        grid-column: 1;
+        border-bottom: none;
+    }
+
+    #main-footer .footer-container > *:nth-child(3), #main-footer .footer-container > *:nth-child(4) {
+        border-bottom: none;
+    }
+
+    /* all immediate children in the footer container */
+    #main-footer .footer-container > * {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid gray;
+        padding: 1rem;
+    }
+
+    #main-footer .footer-container > *:last-child p {
+        font-size: 0.7rem;
+    }
+
+    .page-container > *:first-child {
+        grid-row: 1;
+    }
+
+    .page-container {
+        grid-template-columns: 1fr;
+    }
+
+
+}
