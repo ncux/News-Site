@@ -63,6 +63,11 @@ h1, h2, h3, h4, h5, h6 {
     grid-row: 1 / span 3;
 }
 
+.large-heading {
+    font-size: 2rem;
+    margin-top: 0.3rem;
+}
+
 .list li {
     padding: 0.5rem 0;
     border-bottom: #555555 solid 1px;
@@ -311,6 +316,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .list li a:hover {
     color: var(--primary-color) !important;
+}
+
+/* Article page */
+#news-categories li a:hover {
+    color: var(--dark-color) !important;
+}
+
+#story .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eeeeee;
+    padding: 0.5rem;
+}
+
+#story .meta .category-sports {
+    margin-top: 0.4rem;
+}
+
+#story .article-card p {
+    padding: 1rem;
+    line-height: 1.8;
 }
 
 
